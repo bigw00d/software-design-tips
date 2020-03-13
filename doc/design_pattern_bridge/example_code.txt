@@ -1,0 +1,19 @@
+<example code>
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PC pc_win = new PC(new Windows());
+            PC pc_linux = new PC(new Linux());
+
+            InternetPC npc_win = new InternetPC(new Windows());
+            InternetPC npc_linux = new InternetPC(new Linux());
+
+            pc_win.accessFile();  // -> inputCommand()
+            pc_linux.accessFile();
+
+            pc_win.accessInternet();  // -> inputCommand()
+            pc_linux.accessInternet();
+        }
+    }
